@@ -1,0 +1,70 @@
+{
+    "openapi": "3.0.0",
+    "info":{
+        "title": "Rent A Car Documentation API",
+        "description": "This is the Documentation aobout the API for a Rent Car System",
+        "version": "1.0.0",
+        "contact":{
+            "email": "antonioalves1981@gmail.com"
+        }
+    },
+    "paths":{
+        "/categories":{
+            "post":{
+                "tags":["Category"],
+                "summary": "Create Category",
+                "description": "Create a new category and add in a categories list",
+                "requestBody": {
+                    "content": {
+                        "application/json":{
+                            "schema":{
+                                "type": "object",
+                                "properties":{
+                                    "name":{"type": "string"},
+                                    "description":{"type": "string"}
+                                },
+                                "example":{
+                                    "name": "Category test",
+                                    "description": "Description test"
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "201":{
+                        "description": "Created successfully"
+                    },
+                    "500":{
+                        "description": "Internal Server Error: Category already exists"
+                    }
+                }
+            },
+            "get":{
+                "tags":["Category"],
+                "summary": "List all categories",
+                "description": "Use this route to get all categories created in API",
+                "responses":{
+                    "200":{
+                        "description": "Success ",
+                        "content":{
+                            "application/json":{
+                                "schema":{
+                                    "type": "array",
+                                    "items":{
+                                        "type": "object",
+                                        "properties":{
+                                            "name":{"type": "string"},
+                                            "description":{"type": "string"}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
