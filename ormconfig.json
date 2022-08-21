@@ -1,7 +1,8 @@
 {
     "type": "postgres",
     "host": "localhost",
-    "username": "postgres",
+    "port": 5432,
+    "username": "duque",
     "password": "2312",
     "database": "rentx"
 }
