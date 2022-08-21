@@ -4,6 +4,7 @@ import swaggerUi from "swagger-ui-express";
 import swaggerFile from "./swagger.json";
 import Appdatasource, { createConnection } from "./database/data-source";
 
+createConnection();
 const app = express();
 const port = 3333;
 

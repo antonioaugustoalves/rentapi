@@ -1,4 +1,5 @@
 import {DataSource} from "typeorm";
+import "reflect-metadata"
 
 const datasource = new DataSource({
     type: "postgres",
