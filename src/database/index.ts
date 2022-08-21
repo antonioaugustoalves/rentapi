@@ -6,7 +6,9 @@ const datasource = new DataSource({
     host: "database",
     username: "duque",
     password: "2312",
-    database: 'rentx'
+    database: 'rentx',
+    entities:[],
+    migrations:["./src/database/migrations/*.ts"]
 });
 
 datasource.initialize().then(async () => {
