@@ -14,7 +14,10 @@ app.get("/", (request, response) => {
     response.status(200).json({message:"OK"});
 });
 
-app.listen(port, () => console.log("Server is running on port "+ port));
+app.listen(port, () =>{
+    console.log("Server is running on port and reload "+ port)
+    console.log("Reload working...");
+});
 
 
 
